@@ -2,6 +2,37 @@
 
 This data science project aims to perform portfolio optimization using historical stock data. Portfolio optimization is a crucial aspect of investment management, and this project demonstrates the process of constructing an optimal portfolio given a set of assets.
 
+## Problem Formulation
+
+The objective function is to **maximize** the [Sharpe ratio](https://en.wikipedia.org/wiki/Sharpe_ratio) as follows:
+
+```math
+\begin{align*}
+& \text{Maximize Sharpe Ratio:} \\
+& \text{Maximize:} \quad \frac{\sum_{i=1}^{4} w_i \cdot r_i - R_f}{\sqrt{\sum_{i=1}^{4} \sum_{j=1}^{4} (w_i \cdot w_j \cdot \sigma_{ij})}}
+\end{align*}
+```
+
+_where_
+```math
+\begin{align*}
+& n = 4 \quad \text{(Number of assets)} \\
+& w_i \text{'s represent the portfolio weights for assets AAPL, MSFT, GOOGL, TSLA} \\
+& r_i \text{'s represent the expected returns for assets AAPL, MSFT, GOOGL, TSLA} \\
+& R_f \text{ is the risk-free rate of return} \\
+& \sigma_{ij} \text{'s represent the covariance between assets}
+\end{align*}
+```
+
+_subject to_
+
+```math
+\begin{align*}
+& \text{Fully Invested Portfolio:} \quad \sum_{i=1}^{4} w_i = 1 \\
+& \text{Non-negative Weights:} \quad w_i \geq 0 \quad \text{for } i = 1, 2, 3, 4
+\end{align*}
+```
+
 ## Project Structure
 
 The project is organized into the following directories and files:
