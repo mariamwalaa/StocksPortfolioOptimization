@@ -30,13 +30,13 @@ The `optimization.py` script implements portfolio optimization techniques to con
 
 ## How to Run the Project
 
-1. Create a Conda environment using the provided `requirements.yml` file:
+1. Create a Conda environment using the provided `environment.yml` file:
 
-conda env create -f requirements.yml
+conda env create -f environment.yml
 
 2. Activate the Conda environment:
 
-conda activate portfolio_optimization
+conda activate portfolio-optimization
 
 
 3. Execute the following scripts in the specified order:
@@ -45,7 +45,7 @@ conda activate portfolio_optimization
 - `portfolio_analysis.py`
 - `optimization.py`
 
-4. Explore and analyze the results in the Jupyter notebooks provided in the 'notebooks' directory.
+4. Explore and analyze the results in the Jupyter notebooks provided in the notebooks provided.
 
 ## Data Sources
 
